@@ -19,8 +19,8 @@ export default function Home() {
 
   async function getCustomer() {
     try {
-      let response = await axios.get(`http://localhost:5000/customers`);
-      setCustomerData(response?.data)
+      let response = await axios.get(`https://alyaaeldansh.github.io/host-api/db.json`);
+      setCustomerData(response?.data.customers)
       // console.log(response?.data);
     } catch (error) {
       console.error('Error fetching customers:', error);
@@ -31,8 +31,8 @@ export default function Home() {
 
   async function getTransaction() {
     try {
-      let response = await axios.get(`http://localhost:5000/transactions`);
-      setTransactionData(response?.data)
+      let response = await axios.get(`https://alyaaeldansh.github.io/host-api/db.json`);
+      setTransactionData(response?.data.transactions)
       // console.log(response?.data);
     } catch (error) {
       console.error('Error fetching customers:', error);
